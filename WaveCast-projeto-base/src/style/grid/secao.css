@@ -1,0 +1,26 @@
+.secao{
+    display: grid;
+    align-items: end;
+    row-gap: 2rem;
+}
+
+.secao-horizontal,.secao-vertical{
+    grid-template-rows: 70px auto;
+}
+
+.secao-horizontal > .secao__cartoes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(80%/2, max(350px, 80%/3)), 1fr)); 
+    /*
+        a mesma merda:
+        grid-template-columns: repeat(auto-fit, minmax(min(40%, max(350px, 26%)), 1fr));
+
+        (auto-fit, 200px) - todos os elementos se organizem automaticamente em 200px.
+
+        minmax(min(max())) = ele fala qual valor minimo e o maximo ele pode chegar.
+        exemplo: minimo 20px e o maximo 50px, quando chega e 20px ele vai quebra linha e vai entra outro na frente dele e se chegar em 50px ele para de crescer
+        1fr serve para ele aproveita o resto que sobra da largura.
+        
+    */
+    gap: 1.25rem;
+}

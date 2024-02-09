@@ -24,3 +24,28 @@
     */
     gap: 1.25rem;
 }
+
+.secao-vertical {
+    grid-template-columns: 1fr auto;
+}
+
+.secao-vertical .secao__cartoes{
+    display: grid;
+    grid-auto-flow: column; /* - deixa a alinhado automaticamente em colunas um do lado do outro. */
+    overflow-x: scroll; /*aparece a barra de rolagem de x*/
+    overflow-y: hidden; /*Tira a bara de rolagem de y*/
+    grid-column: 1 / 3;
+    column-gap: 1.25rem;
+}
+
+
+.secao-vertical .secao__cartoes .cartao a{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+.secao-vertical .secao__cartoes .cartao-titulo {
+    flex-grow: 1;
+}

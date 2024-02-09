@@ -1,0 +1,40 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    'i1 i1'
+    'i2 i3'
+    'i4 i3';
+
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 50px 1fr 60px;
+}
+
+.item-1{
+    grid-area: i1;
+    background-color: red;
+}
+.item-2{
+    grid-area: i2;
+    background-color: green;
+}
+.item-3{
+    grid-area: i3;
+    background-color: blue;
+}
+.item-4{
+    grid-area: i4;
+    background-color: yellow;
+}
